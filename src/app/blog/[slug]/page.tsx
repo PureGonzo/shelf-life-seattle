@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import ShareButtons from "@/components/ShareButtons";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -59,6 +60,8 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="prose prose-emerald max-w-none prose-headings:text-emerald-900 prose-a:text-emerald-700 prose-strong:text-gray-900">
           <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
         </div>
+
+        <ShareButtons title={post.title} />
       </article>
     </div>
   );
