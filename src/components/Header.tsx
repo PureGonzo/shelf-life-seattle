@@ -25,6 +25,12 @@ export default function Header() {
               href="/"
               className="text-stone-200 transition-colors hover:text-white"
             >
+              Home
+            </Link>
+            <Link
+              href="/map"
+              className="text-stone-200 transition-colors hover:text-white"
+            >
               Map
             </Link>
             <Link
@@ -90,6 +96,13 @@ export default function Header() {
             <div className="flex flex-col gap-2 pt-2">
               <Link
                 href="/"
+                className="rounded px-3 py-2 text-stone-200 transition-colors hover:bg-emerald-800 hover:text-white"
+                onClick={() => setMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/map"
                 className="rounded px-3 py-2 text-stone-200 transition-colors hover:bg-emerald-800 hover:text-white"
                 onClick={() => setMenuOpen(false)}
               >

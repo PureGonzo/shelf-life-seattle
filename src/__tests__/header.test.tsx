@@ -12,6 +12,7 @@ describe("Header", () => {
 
   it("renders navigation links", () => {
     render(<Header />);
+    expect(screen.getAllByText("Home").length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText("Map").length).toBeGreaterThanOrEqual(1);
     expect(
       screen.getAllByText("Bookstores").length
@@ -27,12 +28,12 @@ describe("Header", () => {
     render(<Header />);
     const menuButton = screen.getAllByLabelText("Toggle menu")[0];
 
-    const mapLinksBefore = screen.getAllByText("Map");
-    const countBefore = mapLinksBefore.length;
+    const homeLinksBefore = screen.getAllByText("Home");
+    const countBefore = homeLinksBefore.length;
 
     fireEvent.click(menuButton);
 
-    const mapLinksAfter = screen.getAllByText("Map");
-    expect(mapLinksAfter.length).toBeGreaterThan(countBefore);
+    const homeLinksAfter = screen.getAllByText("Home");
+    expect(homeLinksAfter.length).toBeGreaterThan(countBefore);
   });
 });

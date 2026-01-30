@@ -25,7 +25,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/"
+                  href="/map"
                   className="text-stone-200 transition-colors hover:text-white"
                 >
                   Interactive Map
