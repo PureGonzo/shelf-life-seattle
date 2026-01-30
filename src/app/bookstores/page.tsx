@@ -24,7 +24,7 @@ export default async function BookstoresPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="mb-2 text-3xl font-bold text-emerald-900">
+      <h1 className="mb-2 font-serif text-3xl font-bold text-emerald-900">
         Shelf Life Seattle
       </h1>
       <p className="mb-8 text-gray-600">
@@ -33,7 +33,7 @@ export default async function BookstoresPage() {
 
       {grouped.map(({ neighborhood, stores }) => (
         <section key={neighborhood} className="mb-10">
-          <h2 className="mb-4 border-b border-emerald-200 pb-2 text-xl font-semibold text-emerald-800">
+          <h2 className="mb-4 border-b border-amber-200 pb-2 text-xl font-semibold text-emerald-800">
             {neighborhood}
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -41,14 +41,14 @@ export default async function BookstoresPage() {
               <Link
                 key={store.id}
                 href={`/bookstores/${store.slug}`}
-                className="group rounded-lg border border-gray-200 p-6 transition-all hover:border-emerald-300 hover:shadow-md"
+                className="group rounded-lg border border-gray-200 p-6 transition-all hover:border-amber-300 hover:shadow-md"
               >
                 <h3 className="mb-1 text-lg font-semibold text-gray-900 group-hover:text-emerald-700">
                   {store.name}
                 </h3>
                 <p className="mb-2 text-sm text-gray-500">{store.address}</p>
                 {store.specialty && (
-                  <span className="inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-800">
+                  <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-800">
                     {store.specialty}
                   </span>
                 )}

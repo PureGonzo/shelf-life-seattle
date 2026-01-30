@@ -46,7 +46,7 @@ export default function AdminBookstoresPage() {
           >
             &larr; Back to admin
           </Link>
-          <h1 className="text-3xl font-bold text-emerald-900">Bookstores</h1>
+          <h1 className="font-serif text-3xl font-bold text-emerald-900">Bookstores</h1>
         </div>
         <Link
           href="/admin/bookstores/new"

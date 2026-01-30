@@ -57,7 +57,7 @@ export default function AdminBlogPage() {
           >
             &larr; Back to admin
           </Link>
-          <h1 className="text-3xl font-bold text-emerald-900">Blog Posts</h1>
+          <h1 className="font-serif text-3xl font-bold text-emerald-900">Blog Posts</h1>
         </div>
         <Link
           href="/admin/blog/new"
@@ -98,7 +98,7 @@ export default function AdminBlogPage() {
               <div className="flex gap-2">
                 <button
                   onClick={() => togglePublish(post)}
-                  className="rounded px-3 py-1 text-sm text-emerald-700 transition-colors hover:bg-emerald-50"
+                  className="rounded px-3 py-1 text-sm text-emerald-700 transition-colors hover:bg-amber-50"
                 >
                   {post.published ? "Unpublish" : "Publish"}
                 </button>

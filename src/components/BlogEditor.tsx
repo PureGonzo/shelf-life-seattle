@@ -214,7 +214,7 @@ export default function BlogEditor({ initialData }: BlogEditorProps) {
                   type="button"
                   title={btn.title}
                   onClick={btn.action}
-                  className="rounded px-2 py-1 text-xs font-medium text-emerald-700 hover:bg-emerald-100"
+                  className="rounded px-2 py-1 text-xs font-medium text-emerald-700 hover:bg-amber-100"
                 >
                   {btn.label}
                 </button>
@@ -274,7 +274,7 @@ export default function BlogEditor({ initialData }: BlogEditorProps) {
       ) : (
         /* Preview tab */
         <div className="mx-auto max-w-3xl py-4">
-          <h1 className="mb-3 text-4xl font-bold text-emerald-900">
+          <h1 className="mb-3 font-serif text-4xl font-bold text-emerald-900">
             {title || "Untitled Post"}
           </h1>
           <time className="text-gray-500">

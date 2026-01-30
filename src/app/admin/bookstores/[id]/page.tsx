@@ -58,7 +58,7 @@ export default function EditBookstorePage({
       >
         &larr; Back to bookstores
       </Link>
-      <h1 className="mb-6 text-3xl font-bold text-emerald-900">
+      <h1 className="mb-6 font-serif text-3xl font-bold text-emerald-900">
         Edit Bookstore
       </h1>
       <BookstoreEditor initialData={bookstore} />

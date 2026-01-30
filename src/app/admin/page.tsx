@@ -47,7 +47,7 @@ export default function AdminPage() {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
         <div className="w-full max-w-sm rounded-lg border border-gray-200 p-8 shadow-sm">
-          <h1 className="mb-6 text-2xl font-bold text-emerald-900">
+          <h1 className="mb-6 font-serif text-2xl font-bold text-emerald-900">
             Admin Login
           </h1>
           <form onSubmit={handleLogin} className="space-y-4">
@@ -82,11 +82,11 @@ export default function AdminPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="mb-8 text-3xl font-bold text-emerald-900">
+      <h1 className="mb-8 font-serif text-3xl font-bold text-emerald-900">
         Admin Dashboard
       </h1>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {/* Blog Management */}
         <div className="rounded-lg border border-gray-200 p-6">
           <h2 className="mb-4 text-xl font-semibold text-gray-900">
@@ -104,7 +104,7 @@ export default function AdminPage() {
             </Link>
             <Link
               href="/admin/blog/new"
-              className="rounded-lg border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-50"
+              className="rounded-lg border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 transition-colors hover:bg-amber-50"
             >
               New Post
             </Link>
@@ -128,9 +128,28 @@ export default function AdminPage() {
             </Link>
             <Link
               href="/admin/bookstores/new"
-              className="rounded-lg border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-50"
+              className="rounded-lg border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 transition-colors hover:bg-amber-50"
             >
               Add Bookstore
+            </Link>
+          </div>
+        </div>
+
+        {/* Current Reads Management */}
+        <div className="rounded-lg border border-gray-200 p-6">
+          <h2 className="mb-4 text-xl font-semibold text-gray-900">
+            Current Reads
+          </h2>
+          <p className="mb-4 text-gray-600">
+            Manage the books shown in the &ldquo;What I&apos;m Reading&rdquo;
+            section on the homepage.
+          </p>
+          <div className="flex gap-3">
+            <Link
+              href="/admin/reads"
+              className="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-600"
+            >
+              Manage Reads
             </Link>
           </div>
         </div>

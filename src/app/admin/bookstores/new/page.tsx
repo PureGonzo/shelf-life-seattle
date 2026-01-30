@@ -12,7 +12,7 @@ export default function NewBookstorePage() {
       >
         &larr; Back to bookstores
       </Link>
-      <h1 className="mb-6 text-3xl font-bold text-emerald-900">
+      <h1 className="mb-6 font-serif text-3xl font-bold text-emerald-900">
         Add Bookstore
       </h1>
       <BookstoreEditor />

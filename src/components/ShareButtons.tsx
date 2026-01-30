@@ -37,7 +37,7 @@ export default function ShareButtons({ title }: ShareButtonsProps) {
           href={link.href}
           target={link.label === "Email" ? undefined : "_blank"}
           rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-          className="rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-100"
+          className="rounded-md border border-amber-200 bg-amber-50 px-3 py-1 text-sm font-medium text-emerald-700 transition-colors hover:bg-amber-100"
         >
           {link.label}
         </a>

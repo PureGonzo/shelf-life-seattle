@@ -10,7 +10,7 @@ export default function Error({
   return (
     <div className="flex min-h-[60vh] items-center justify-center px-4">
       <div className="text-center">
-        <h1 className="mb-2 text-4xl font-bold text-emerald-900">
+        <h1 className="mb-2 font-serif text-4xl font-bold text-emerald-900">
           Something went wrong
         </h1>
         <p className="mb-6 text-gray-600">

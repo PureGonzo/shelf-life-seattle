@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="mb-8 text-4xl font-bold text-emerald-900">
+      <h1 className="mb-8 font-serif text-4xl font-bold text-emerald-900">
         About Shelf Life Seattle
       </h1>
 

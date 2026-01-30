@@ -68,7 +68,7 @@ export default function NewsletterSignup({
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
             required
-            className="flex-1 rounded-md bg-emerald-800 px-3 py-2 text-sm text-white placeholder-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="flex-1 rounded-md bg-emerald-800 px-3 py-2 text-sm text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
           <button
             type="submit"
@@ -89,7 +89,7 @@ export default function NewsletterSignup({
   }
 
   return (
-    <div className="rounded-lg bg-emerald-50 p-8">
+    <div className="rounded-lg bg-amber-50 p-8">
       <h2 className="mb-2 text-2xl font-bold text-emerald-900">
         Subscribe to Our Newsletter
       </h2>
@@ -104,7 +104,7 @@ export default function NewsletterSignup({
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email address"
           required
-          className="flex-1 rounded-lg border border-emerald-300 px-4 py-3 text-emerald-900 placeholder-emerald-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          className="flex-1 rounded-lg border border-amber-300 px-4 py-3 text-emerald-900 placeholder-stone-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         />
         <button
           type="submit"

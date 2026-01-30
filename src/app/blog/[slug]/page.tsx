@@ -43,7 +43,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <article>
         <header className="mb-8">
-          <h1 className="mb-3 text-4xl font-bold text-emerald-900">
+          <h1 className="mb-3 font-serif text-4xl font-bold text-emerald-900">
             {post.title}
           </h1>
           {post.publishedAt && (
