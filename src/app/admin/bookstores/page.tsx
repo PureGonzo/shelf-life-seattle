@@ -42,15 +42,15 @@ export default function AdminBookstoresPage() {
         <div>
           <Link
             href="/admin"
-            className="mb-2 inline-block text-sm text-amber-700 hover:text-amber-900"
+            className="mb-2 inline-block text-sm text-emerald-700 hover:text-emerald-900"
           >
             &larr; Back to admin
           </Link>
-          <h1 className="text-3xl font-bold text-amber-900">Bookstores</h1>
+          <h1 className="text-3xl font-bold text-emerald-900">Bookstores</h1>
         </div>
         <Link
           href="/admin/bookstores/new"
-          className="rounded-lg bg-amber-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-amber-600"
+          className="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-600"
         >
           Add Bookstore
         </Link>

@@ -10,7 +10,7 @@ export default function Error({
   return (
     <div className="flex min-h-[60vh] items-center justify-center px-4">
       <div className="text-center">
-        <h1 className="mb-2 text-4xl font-bold text-amber-900">
+        <h1 className="mb-2 text-4xl font-bold text-emerald-900">
           Something went wrong
         </h1>
         <p className="mb-6 text-gray-600">
@@ -18,7 +18,7 @@ export default function Error({
         </p>
         <button
           onClick={reset}
-          className="rounded-lg bg-amber-700 px-6 py-2 font-medium text-white transition-colors hover:bg-amber-600"
+          className="rounded-lg bg-emerald-700 px-6 py-2 font-medium text-white transition-colors hover:bg-emerald-600"
         >
           Try again
         </button>

@@ -24,7 +24,7 @@ export default function RootLayout({
           className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/bg.jpg')" }}
         >
-          <div className="h-full w-full bg-amber-50/90" />
+          <div className="h-full w-full bg-stone-100/90" />
         </div>
         <Header />
         <main className="flex-1">{children}</main>

@@ -11,7 +11,7 @@ export default function NewsletterPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-8 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-amber-900">
+        <h1 className="mb-4 text-4xl font-bold text-emerald-900">
           Newsletter
         </h1>
         <p className="text-lg text-gray-600">
@@ -29,21 +29,21 @@ export default function NewsletterPage() {
         </h2>
         <ul className="space-y-3 text-gray-600">
           <li className="flex items-start gap-3">
-            <span className="mt-1 text-amber-600">&#10003;</span>
+            <span className="mt-1 text-emerald-600">&#10003;</span>
             <span>
               Monthly roundups of bookstore events and author readings
             </span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="mt-1 text-amber-600">&#10003;</span>
+            <span className="mt-1 text-emerald-600">&#10003;</span>
             <span>New bookstore openings and closings</span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="mt-1 text-amber-600">&#10003;</span>
+            <span className="mt-1 text-emerald-600">&#10003;</span>
             <span>Curated reading recommendations from local booksellers</span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="mt-1 text-amber-600">&#10003;</span>
+            <span className="mt-1 text-emerald-600">&#10003;</span>
             <span>Our latest blog posts and bookstore profiles</span>
           </li>
         </ul>

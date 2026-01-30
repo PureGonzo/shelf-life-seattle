@@ -15,7 +15,7 @@ export default async function HomePage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-8 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-amber-900">
+        <h1 className="mb-4 text-4xl font-bold text-emerald-900">
           Shelf Life Seattle
         </h1>
         <p className="mx-auto max-w-2xl text-lg text-gray-600">
@@ -28,7 +28,7 @@ export default async function HomePage() {
       <div className="flex flex-col gap-8 lg:flex-row">
         {/* Blog sidebar */}
         <aside className="order-2 lg:order-1 lg:w-72 lg:shrink-0">
-          <h2 className="mb-4 text-lg font-semibold text-amber-900">
+          <h2 className="mb-4 text-lg font-semibold text-emerald-900">
             Latest Posts
           </h2>
           <div className="flex flex-col gap-4">
@@ -36,9 +36,9 @@ export default async function HomePage() {
               <Link
                 key={post.id}
                 href={`/blog/${post.slug}`}
-                className="group rounded-lg border border-gray-200 p-4 transition-all hover:border-amber-300 hover:shadow-md"
+                className="group rounded-lg border border-gray-200 p-4 transition-all hover:border-emerald-300 hover:shadow-md"
               >
-                <h3 className="mb-1 text-sm font-semibold text-gray-900 group-hover:text-amber-700">
+                <h3 className="mb-1 text-sm font-semibold text-gray-900 group-hover:text-emerald-700">
                   {post.title}
                 </h3>
                 {post.publishedAt && (
@@ -58,7 +58,7 @@ export default async function HomePage() {
           </div>
           <Link
             href="/blog"
-            className="mt-4 inline-block text-sm font-medium text-amber-700 hover:text-amber-900"
+            className="mt-4 inline-block text-sm font-medium text-emerald-700 hover:text-emerald-900"
           >
             All posts &rarr;
           </Link>

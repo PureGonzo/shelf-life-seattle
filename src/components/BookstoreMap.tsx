@@ -72,12 +72,12 @@ export default function BookstoreMap({ bookstores }: BookstoreMapProps) {
           placeholder="Search bookstores..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+          className="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         />
         <select
           value={neighborhood}
           onChange={(e) => setNeighborhood(e.target.value)}
-          className="rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+          className="rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         >
           <option value="">All Neighborhoods</option>
           {neighborhoods.map((n) => (
@@ -111,7 +111,7 @@ export default function BookstoreMap({ bookstores }: BookstoreMapProps) {
                   <h3 className="mb-1 font-bold">{store.name}</h3>
                   <p className="mb-1 text-sm text-gray-600">{store.address}</p>
                   {store.specialty && (
-                    <p className="mb-1 text-xs text-amber-700">
+                    <p className="mb-1 text-xs text-emerald-700">
                       {store.specialty}
                     </p>
                   )}
@@ -120,7 +120,7 @@ export default function BookstoreMap({ bookstores }: BookstoreMapProps) {
                   )}
                   <Link
                     href={`/bookstores/${store.slug}`}
-                    className="text-sm font-medium text-amber-700 hover:text-amber-900"
+                    className="text-sm font-medium text-emerald-700 hover:text-emerald-900"
                   >
                     View Details &rarr;
                   </Link>

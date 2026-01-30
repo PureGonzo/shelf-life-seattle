@@ -20,6 +20,7 @@ describe("Header", () => {
     expect(
       screen.getAllByText("Newsletter").length
     ).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("About").length).toBeGreaterThanOrEqual(1);
   });
 
   it("toggles mobile menu", () => {

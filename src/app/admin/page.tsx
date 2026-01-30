@@ -47,7 +47,7 @@ export default function AdminPage() {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
         <div className="w-full max-w-sm rounded-lg border border-gray-200 p-8 shadow-sm">
-          <h1 className="mb-6 text-2xl font-bold text-amber-900">
+          <h1 className="mb-6 text-2xl font-bold text-emerald-900">
             Admin Login
           </h1>
           <form onSubmit={handleLogin} className="space-y-4">
@@ -63,14 +63,14 @@ export default function AdminPage() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 required
               />
             </div>
             {error && <p className="text-sm text-red-600">{error}</p>}
             <button
               type="submit"
-              className="w-full rounded-lg bg-amber-700 px-4 py-2 font-semibold text-white transition-colors hover:bg-amber-600"
+              className="w-full rounded-lg bg-emerald-700 px-4 py-2 font-semibold text-white transition-colors hover:bg-emerald-600"
             >
               Log In
             </button>
@@ -82,7 +82,7 @@ export default function AdminPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="mb-8 text-3xl font-bold text-amber-900">
+      <h1 className="mb-8 text-3xl font-bold text-emerald-900">
         Admin Dashboard
       </h1>
 
@@ -98,13 +98,13 @@ export default function AdminPage() {
           <div className="flex gap-3">
             <Link
               href="/admin/blog"
-              className="rounded-lg bg-amber-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-amber-600"
+              className="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-600"
             >
               Manage Posts
             </Link>
             <Link
               href="/admin/blog/new"
-              className="rounded-lg border border-amber-700 px-4 py-2 text-sm font-medium text-amber-700 transition-colors hover:bg-amber-50"
+              className="rounded-lg border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-50"
             >
               New Post
             </Link>
@@ -122,13 +122,13 @@ export default function AdminPage() {
           <div className="flex gap-3">
             <Link
               href="/admin/bookstores"
-              className="rounded-lg bg-amber-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-amber-600"
+              className="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-600"
             >
               Manage Bookstores
             </Link>
             <Link
               href="/admin/bookstores/new"
-              className="rounded-lg border border-amber-700 px-4 py-2 text-sm font-medium text-amber-700 transition-colors hover:bg-amber-50"
+              className="rounded-lg border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-50"
             >
               Add Bookstore
             </Link>

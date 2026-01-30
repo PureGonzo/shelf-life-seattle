@@ -68,12 +68,12 @@ export default function NewsletterSignup({
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
             required
-            className="flex-1 rounded-md bg-amber-800 px-3 py-2 text-sm text-white placeholder-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="flex-1 rounded-md bg-emerald-800 px-3 py-2 text-sm text-white placeholder-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
           <button
             type="submit"
             disabled={status === "loading"}
-            className="rounded-md bg-amber-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-amber-500 disabled:opacity-50"
+            className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-500 disabled:opacity-50"
           >
             {status === "loading" ? "..." : "Subscribe"}
           </button>
@@ -89,11 +89,11 @@ export default function NewsletterSignup({
   }
 
   return (
-    <div className="rounded-lg bg-amber-50 p-8">
-      <h2 className="mb-2 text-2xl font-bold text-amber-900">
+    <div className="rounded-lg bg-emerald-50 p-8">
+      <h2 className="mb-2 text-2xl font-bold text-emerald-900">
         Subscribe to Our Newsletter
       </h2>
-      <p className="mb-6 text-amber-700">
+      <p className="mb-6 text-emerald-700">
         Get the latest news about Seattle&apos;s independent bookstores, upcoming
         events, and new blog posts delivered to your inbox.
       </p>
@@ -104,12 +104,12 @@ export default function NewsletterSignup({
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email address"
           required
-          className="flex-1 rounded-lg border border-amber-300 px-4 py-3 text-amber-900 placeholder-amber-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+          className="flex-1 rounded-lg border border-emerald-300 px-4 py-3 text-emerald-900 placeholder-emerald-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="rounded-lg bg-amber-700 px-8 py-3 font-semibold text-white transition-colors hover:bg-amber-600 disabled:opacity-50"
+          className="rounded-lg bg-emerald-700 px-8 py-3 font-semibold text-white transition-colors hover:bg-emerald-600 disabled:opacity-50"
         >
           {status === "loading" ? "Subscribing..." : "Subscribe"}
         </button>

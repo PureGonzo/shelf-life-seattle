@@ -97,7 +97,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
             value={form.name}
             onChange={(e) => updateField("name", e.target.value)}
             required
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -109,7 +109,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
             value={form.slug}
             onChange={(e) => updateField("slug", e.target.value)}
             required
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
       </div>
@@ -124,7 +124,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
             value={form.address}
             onChange={(e) => updateField("address", e.target.value)}
             required
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -136,7 +136,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
             value={form.neighborhood}
             onChange={(e) => updateField("neighborhood", e.target.value)}
             required
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
       </div>
@@ -152,7 +152,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
             value={form.lat}
             onChange={(e) => updateField("lat", e.target.value)}
             required
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -165,7 +165,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
             value={form.lng}
             onChange={(e) => updateField("lng", e.target.value)}
             required
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
       </div>
@@ -179,7 +179,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
           onChange={(e) => updateField("description", e.target.value)}
           required
           rows={4}
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         />
       </div>
 
@@ -192,7 +192,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
             type="url"
             value={form.websiteUrl}
             onChange={(e) => updateField("websiteUrl", e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -203,7 +203,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
             type="text"
             value={form.hours}
             onChange={(e) => updateField("hours", e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -214,7 +214,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
             type="text"
             value={form.specialty}
             onChange={(e) => updateField("specialty", e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
       </div>
@@ -223,7 +223,7 @@ export default function BookstoreEditor({ initialData }: BookstoreEditorProps) {
         <button
           type="submit"
           disabled={saving}
-          className="rounded-lg bg-amber-700 px-6 py-2 font-medium text-white transition-colors hover:bg-amber-600 disabled:opacity-50"
+          className="rounded-lg bg-emerald-700 px-6 py-2 font-medium text-white transition-colors hover:bg-emerald-600 disabled:opacity-50"
         >
           {saving
             ? "Saving..."

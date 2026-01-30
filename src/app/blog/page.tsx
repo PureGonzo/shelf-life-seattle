@@ -16,7 +16,7 @@ export default async function BlogPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="mb-2 text-3xl font-bold text-amber-900">Blog</h1>
+      <h1 className="mb-2 text-3xl font-bold text-emerald-900">Blog</h1>
       <p className="mb-8 text-gray-600">
         Stories and guides about Seattle&apos;s independent bookstores
       </p>
@@ -31,7 +31,7 @@ export default async function BlogPage() {
               className="border-b border-gray-200 pb-8 last:border-b-0"
             >
               <Link href={`/blog/${post.slug}`} className="group">
-                <h2 className="mb-2 text-2xl font-semibold text-gray-900 group-hover:text-amber-700">
+                <h2 className="mb-2 text-2xl font-semibold text-gray-900 group-hover:text-emerald-700">
                   {post.title}
                 </h2>
               </Link>
@@ -47,7 +47,7 @@ export default async function BlogPage() {
               <p className="mb-3 text-gray-600">{post.excerpt}</p>
               <Link
                 href={`/blog/${post.slug}`}
-                className="text-sm font-medium text-amber-700 hover:text-amber-900"
+                className="text-sm font-medium text-emerald-700 hover:text-emerald-900"
               >
                 Read more &rarr;
               </Link>

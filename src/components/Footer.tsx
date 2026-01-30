@@ -5,7 +5,7 @@ import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto bg-amber-900 text-amber-100">
+    <footer className="mt-auto bg-emerald-900 text-emerald-100">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* About */}
@@ -13,7 +13,7 @@ export default function Footer() {
             <h3 className="mb-3 text-lg font-semibold text-white">
               Shelf Life Seattle
             </h3>
-            <p className="text-sm text-amber-200">
+            <p className="text-sm text-emerald-200">
               Celebrating Seattle&apos;s independent bookstore community. Discover
               unique shops, read stories, and support local booksellers.
             </p>
@@ -26,7 +26,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-amber-200 transition-colors hover:text-white"
+                  className="text-emerald-200 transition-colors hover:text-white"
                 >
                   Interactive Map
                 </Link>
@@ -34,7 +34,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/bookstores"
-                  className="text-amber-200 transition-colors hover:text-white"
+                  className="text-emerald-200 transition-colors hover:text-white"
                 >
                   All Bookstores
                 </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-amber-200 transition-colors hover:text-white"
+                  className="text-emerald-200 transition-colors hover:text-white"
                 >
                   Blog
                 </Link>
@@ -50,9 +50,17 @@ export default function Footer() {
               <li>
                 <Link
                   href="/newsletter"
-                  className="text-amber-200 transition-colors hover:text-white"
+                  className="text-emerald-200 transition-colors hover:text-white"
                 >
                   Newsletter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="text-emerald-200 transition-colors hover:text-white"
+                >
+                  About
                 </Link>
               </li>
             </ul>
@@ -67,7 +75,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-amber-800 pt-8 text-center text-sm text-amber-300">
+        <div className="mt-8 border-t border-emerald-800 pt-8 text-center text-sm text-emerald-300">
           <p>
             &copy; {new Date().getFullYear()} Shelf Life Seattle. Made with
             love for books.
