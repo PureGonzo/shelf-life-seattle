@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { prisma } from "@/lib/prisma";
+import { fetchCurrentlyReading } from "@/lib/goodreads";
 import MapWrapper from "@/components/MapWrapper";
 
 export default async function HomePage() {
@@ -11,10 +11,7 @@ export default async function HomePage() {
       orderBy: { publishedAt: "desc" },
       take: 4,
     }),
-    prisma.currentRead.findMany({
-      where: { active: true },
-      orderBy: { sortOrder: "asc" },
-    }),
+    fetchCurrentlyReading(),
   ]);
 
   const featuredPost = blogPosts[0] ?? null;
@@ -156,15 +153,18 @@ export default async function HomePage() {
             What I&apos;m Reading
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {currentReads.map((read) => {
-              const card = (
+            {currentReads.map((read) => (
+              <a
+                key={read.title}
+                href={read.linkUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="flex gap-4 rounded-lg border border-gray-200 bg-amber-50 p-4 transition-all hover:border-amber-300 hover:shadow-md">
                   {read.coverUrl && (
-                    <Image
+                    <img
                       src={read.coverUrl}
                       alt={`Cover of ${read.title}`}
-                      width={80}
-                      height={120}
                       className="h-[120px] w-[80px] shrink-0 rounded object-cover"
                     />
                   )}
@@ -173,30 +173,10 @@ export default async function HomePage() {
                       {read.title}
                     </h3>
                     <p className="text-sm text-gray-500">by {read.author}</p>
-                    {read.notes && (
-                      <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                        {read.notes}
-                      </p>
-                    )}
                   </div>
                 </div>
-              );
-
-              if (read.linkUrl) {
-                return (
-                  <a
-                    key={read.id}
-                    href={read.linkUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {card}
-                  </a>
-                );
-              }
-
-              return <div key={read.id}>{card}</div>;
-            })}
+              </a>
+            ))}
           </div>
         </section>
       )}

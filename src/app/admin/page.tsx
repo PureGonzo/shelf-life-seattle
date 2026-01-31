@@ -135,24 +135,7 @@ export default function AdminPage() {
           </div>
         </div>
 
-        {/* Current Reads Management */}
-        <div className="rounded-lg border border-gray-200 p-6">
-          <h2 className="mb-4 text-xl font-semibold text-gray-900">
-            Current Reads
-          </h2>
-          <p className="mb-4 text-gray-600">
-            Manage the books shown in the &ldquo;What I&apos;m Reading&rdquo;
-            section on the homepage.
-          </p>
-          <div className="flex gap-3">
-            <Link
-              href="/admin/reads"
-              className="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-600"
-            >
-              Manage Reads
-            </Link>
-          </div>
-        </div>
+
       </div>
     </div>
   );
