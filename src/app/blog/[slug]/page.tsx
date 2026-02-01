@@ -69,7 +69,9 @@ export default async function BlogPostPage({ params }: Props) {
         <ShareButtons title={post.title} />
       </article>
 
-      <CurrentlyReading />
+      <div className="mx-auto mt-12 w-[75vw] max-w-5xl">
+        <CurrentlyReading />
+      </div>
     </div>
   );
 }
