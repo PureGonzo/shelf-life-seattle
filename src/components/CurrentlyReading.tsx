@@ -17,17 +17,20 @@ export default async function CurrentlyReading() {
             href={read.linkUrl}
             target="_blank"
             rel="noopener noreferrer"
+            className="block"
           >
-            <div className="flex gap-4 rounded-lg border border-gray-200 bg-amber-50 p-4 transition-all hover:border-amber-300 hover:shadow-md">
+            <div className="flex h-full gap-4 rounded-lg border border-gray-200 bg-amber-50 p-4 transition-all hover:border-amber-300 hover:shadow-md">
               {read.coverUrl && (
                 <img
                   src={read.coverUrl}
                   alt={`Cover of ${read.title}`}
-                  className="h-[120px] w-[80px] shrink-0 rounded object-cover"
+                  className="w-[80px] shrink-0 self-start rounded object-cover"
                 />
               )}
               <div className="min-w-0">
-                <h3 className="font-semibold text-gray-900">{read.title}</h3>
+                <h3 className="break-words font-semibold text-gray-900">
+                  {read.title}
+                </h3>
                 <p className="text-sm text-gray-500">by {read.author}</p>
               </div>
             </div>

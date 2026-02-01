@@ -1,11 +1,18 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 interface ShareButtonsProps {
   title: string;
 }
 
 export default function ShareButtons({ title }: ShareButtonsProps) {
-  const url = typeof window !== "undefined" ? window.location.href : "";
+  const [url, setUrl] = useState("");
+
+  useEffect(() => {
+    setUrl(window.location.href);
+  }, []);
+
   const encodedTitle = encodeURIComponent(title);
   const encodedUrl = encodeURIComponent(url);
 
