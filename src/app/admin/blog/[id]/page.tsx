@@ -10,6 +10,7 @@ interface BlogPost {
   slug: string;
   content: string;
   excerpt: string;
+  imageUrl: string | null;
   published: boolean;
 }
 

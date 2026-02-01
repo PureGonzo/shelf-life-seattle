@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ShareButtons from "@/components/ShareButtons";
+import CurrentlyReading from "@/components/CurrentlyReading";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -18,9 +19,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Post Not Found" };
   }
 
+  const ogImage =
+    post.imageUrl || post.content.match(/!\[.*?\]\((.*?)\)/)?.[1];
+
   return {
     title: post.title,
     description: post.excerpt,
+    openGraph: ogImage ? { images: [{ url: ogImage }] } : undefined,
   };
 }
 
@@ -63,6 +68,8 @@ export default async function BlogPostPage({ params }: Props) {
 
         <ShareButtons title={post.title} />
       </article>
+
+      <CurrentlyReading />
     </div>
   );
 }

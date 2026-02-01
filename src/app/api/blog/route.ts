@@ -22,6 +22,7 @@ export async function POST(request: NextRequest) {
       slug: body.slug,
       content: body.content,
       excerpt: body.excerpt,
+      imageUrl: body.imageUrl || null,
       published: body.published ?? false,
       publishedAt: body.published ? new Date() : null,
     },

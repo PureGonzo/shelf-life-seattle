@@ -12,6 +12,7 @@ interface BlogEditorProps {
     slug: string;
     content: string;
     excerpt: string;
+    imageUrl: string | null;
     published: boolean;
   };
 }
@@ -24,12 +25,14 @@ export default function BlogEditor({ initialData }: BlogEditorProps) {
   const [slug, setSlug] = useState(initialData?.slug ?? "");
   const [content, setContent] = useState(initialData?.content ?? "");
   const [excerpt, setExcerpt] = useState(initialData?.excerpt ?? "");
+  const [imageUrl, setImageUrl] = useState(initialData?.imageUrl ?? "");
   const [published, setPublished] = useState(initialData?.published ?? false);
   const [saving, setSaving] = useState(false);
   const [activeTab, setActiveTab] = useState<"write" | "preview">("write");
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const primaryImageInputRef = useRef<HTMLInputElement>(null);
 
   const generateSlug = (text: string) => {
     return text
@@ -95,6 +98,28 @@ export default function BlogEditor({ initialData }: BlogEditorProps) {
     e.target.value = "";
   };
 
+  const handlePrimaryImageUpload = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const res = await fetch("/api/upload", { method: "POST", body: formData });
+
+    if (res.ok) {
+      const { url } = await res.json();
+      setImageUrl(url);
+    } else {
+      const { error } = await res.json();
+      alert(error || "Upload failed");
+    }
+
+    e.target.value = "";
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSaving(true);
@@ -105,7 +130,7 @@ export default function BlogEditor({ initialData }: BlogEditorProps) {
     const res = await fetch(url, {
       method,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title, slug, content, excerpt, published }),
+      body: JSON.stringify({ title, slug, content, excerpt, imageUrl: imageUrl || null, published }),
     });
 
     if (res.ok) {
@@ -186,6 +211,43 @@ export default function BlogEditor({ initialData }: BlogEditorProps) {
                 className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
+          </div>
+
+          <div>
+            <label className="mb-1 block text-sm font-medium text-gray-700">
+              Primary Image
+            </label>
+            {imageUrl ? (
+              <div className="flex items-start gap-4">
+                <img
+                  src={imageUrl}
+                  alt="Primary image preview"
+                  className="h-24 w-36 rounded border border-gray-200 object-cover"
+                />
+                <button
+                  type="button"
+                  onClick={() => setImageUrl("")}
+                  className="rounded border border-gray-300 px-3 py-1 text-sm text-gray-600 hover:bg-gray-50"
+                >
+                  Clear
+                </button>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => primaryImageInputRef.current?.click()}
+                className="rounded-lg border border-dashed border-gray-300 px-4 py-2 text-sm text-gray-500 hover:border-emerald-500 hover:text-emerald-700"
+              >
+                Upload image
+              </button>
+            )}
+            <input
+              ref={primaryImageInputRef}
+              type="file"
+              accept="image/*"
+              onChange={handlePrimaryImageUpload}
+              className="hidden"
+            />
           </div>
 
           <div>

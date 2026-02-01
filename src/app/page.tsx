@@ -1,17 +1,16 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { fetchCurrentlyReading } from "@/lib/goodreads";
 import MapWrapper from "@/components/MapWrapper";
+import CurrentlyReading from "@/components/CurrentlyReading";
 
 export default async function HomePage() {
-  const [bookstores, blogPosts, currentReads] = await Promise.all([
+  const [bookstores, blogPosts] = await Promise.all([
     prisma.bookstore.findMany({ orderBy: { name: "asc" } }),
     prisma.blogPost.findMany({
       where: { published: true },
       orderBy: { publishedAt: "desc" },
       take: 4,
     }),
-    fetchCurrentlyReading(),
   ]);
 
   const featuredPost = blogPosts[0] ?? null;
@@ -42,16 +41,19 @@ export default async function HomePage() {
             href={`/blog/${featuredPost.slug}`}
             className="group block overflow-hidden rounded-xl border border-gray-200 transition-all hover:border-amber-300 hover:shadow-lg md:flex"
           >
-            {featuredPost.content &&
-              extractFirstImage(featuredPost.content) && (
-                <div className="md:w-2/5">
-                  <img
-                    src={extractFirstImage(featuredPost.content)!}
-                    alt=""
-                    className="h-64 w-full object-cover md:h-full"
-                  />
-                </div>
-              )}
+            {(featuredPost.imageUrl ??
+              extractFirstImage(featuredPost.content)) && (
+              <div className="md:w-2/5">
+                <img
+                  src={
+                    (featuredPost.imageUrl ??
+                      extractFirstImage(featuredPost.content))!
+                  }
+                  alt=""
+                  className="h-64 w-full object-cover md:h-full"
+                />
+              </div>
+            )}
             <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
               <h2 className="mb-2 font-serif text-2xl font-bold text-gray-900 group-hover:text-emerald-700 md:text-3xl">
                 {featuredPost.title}
@@ -101,9 +103,8 @@ export default async function HomePage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {recentPosts.map((post) => {
-              const postImage = post.content
-                ? extractFirstImage(post.content)
-                : null;
+              const postImage =
+                post.imageUrl ?? extractFirstImage(post.content);
               return (
                 <Link
                   key={post.id}
@@ -147,39 +148,7 @@ export default async function HomePage() {
       )}
 
       {/* What I'm Reading */}
-      {currentReads.length > 0 && (
-        <section className="mb-12">
-          <h2 className="mb-6 font-serif text-2xl font-bold text-emerald-900">
-            What I&apos;m Reading
-          </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {currentReads.map((read) => (
-              <a
-                key={read.title}
-                href={read.linkUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="flex gap-4 rounded-lg border border-gray-200 bg-amber-50 p-4 transition-all hover:border-amber-300 hover:shadow-md">
-                  {read.coverUrl && (
-                    <img
-                      src={read.coverUrl}
-                      alt={`Cover of ${read.title}`}
-                      className="h-[120px] w-[80px] shrink-0 rounded object-cover"
-                    />
-                  )}
-                  <div className="min-w-0">
-                    <h3 className="font-semibold text-gray-900">
-                      {read.title}
-                    </h3>
-                    <p className="text-sm text-gray-500">by {read.author}</p>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
+      <CurrentlyReading />
 
       {/* Map section */}
       <section>
