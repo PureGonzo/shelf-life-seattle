@@ -41,7 +41,7 @@ export default async function BookstoresPage() {
               <Link
                 key={store.id}
                 href={`/bookstores/${store.slug}`}
-                className="group rounded-lg border border-gray-200 p-6 transition-all hover:border-amber-300 hover:shadow-md"
+                className="group rounded-lg border border-amber-200 border-t-4 border-t-emerald-600 bg-white shadow-sm p-6 transition-all hover:border-amber-300 hover:shadow-md"
               >
                 <h3 className="mb-1 text-lg font-semibold text-gray-900 group-hover:text-emerald-700">
                   {store.name}

@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: Props) {
           )}
         </header>
 
-        <div className="prose prose-emerald max-w-none prose-headings:text-emerald-900 prose-a:text-emerald-700 prose-strong:text-gray-900">
+        <div className="prose prose-emerald max-w-none prose-headings:text-emerald-900 prose-a:text-emerald-700 prose-strong:text-gray-900 prose-blockquote:border-l-amber-400 prose-blockquote:font-serif prose-blockquote:text-emerald-900">
           <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
         </div>
 

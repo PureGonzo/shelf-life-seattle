@@ -19,7 +19,7 @@ export default async function CurrentlyReading() {
             rel="noopener noreferrer"
             className="block"
           >
-            <div className="flex h-full gap-4 rounded-lg border border-gray-200 bg-amber-50 p-4 transition-all hover:border-amber-300 hover:shadow-md">
+            <div className="flex h-full gap-4 rounded-lg border border-amber-200 bg-amber-50 shadow-sm p-4 transition-all hover:border-amber-300 hover:shadow-md">
               {read.coverUrl && (
                 <img
                   src={read.coverUrl}

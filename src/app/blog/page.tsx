@@ -28,7 +28,7 @@ export default async function BlogPage() {
           {posts.map((post) => (
             <article
               key={post.id}
-              className="border-b border-gray-200 pb-8 last:border-b-0"
+              className="border-b border-amber-200 pb-8 last:border-b-0"
             >
               <Link href={`/blog/${post.slug}`} className="group">
                 <h2 className="mb-2 text-2xl font-semibold text-gray-900 group-hover:text-emerald-700">
